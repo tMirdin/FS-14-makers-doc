@@ -1,5 +1,6 @@
 import React from "react";
 import mac from "../../assets/Mac_Studio.png";
+import "./Home.css";
 
 const Home = () => {
   return (
