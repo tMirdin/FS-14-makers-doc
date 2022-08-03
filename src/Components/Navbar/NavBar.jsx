@@ -21,13 +21,13 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link>
+            <Nav.Link href="#">
               <NavLink to="/">Home</NavLink>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="#">
               <NavLink to="/add">Add Topic</NavLink>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="#">
               <NavLink to="/topicsList">Topics List</NavLink>
             </Nav.Link>
           </Nav>

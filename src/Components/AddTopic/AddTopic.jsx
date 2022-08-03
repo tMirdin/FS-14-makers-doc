@@ -5,7 +5,6 @@ import "./AddTopic.css";
 
 const AddTopic = () => {
   const { addTopic } = useContext(topicsContext);
-  addTopic();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -19,6 +18,11 @@ const AddTopic = () => {
       image,
       lib,
     };
+    addTopic(newTopic);
+    setTitle("");
+    setDescription("");
+    setImage("");
+    setLib("");
   }
 
   return (
@@ -27,6 +31,7 @@ const AddTopic = () => {
         <InputGroup className="addTopic-inputs mb-3">
           <InputGroup.Text id="basic-addon1">Название</InputGroup.Text>
           <FormControl
+            value={title}
             placeholder="Добавьте название"
             aria-label="Username"
             aria-describedby="basic-addon1"
@@ -36,6 +41,7 @@ const AddTopic = () => {
         <InputGroup className="addTopic-inputs mb-3">
           <InputGroup.Text id="basic-addon1">Описание</InputGroup.Text>
           <FormControl
+            value={description}
             placeholder="Добавьте описание"
             aria-label="Username"
             aria-describedby="basic-addon1"
@@ -45,6 +51,7 @@ const AddTopic = () => {
         <InputGroup className="addTopic-inputs mb-3">
           <InputGroup.Text id="basic-addon1">Картинка</InputGroup.Text>
           <FormControl
+            value={image}
             placeholder="Вставьте ссылку на картинку"
             aria-label="Username"
             aria-describedby="basic-addon1"
@@ -54,6 +61,7 @@ const AddTopic = () => {
         <InputGroup className="addTopic-inputs mb-3">
           <InputGroup.Text id="basic-addon1">Ссылка</InputGroup.Text>
           <FormControl
+            value={lib}
             placeholder="Вставьте ссылку на информацию"
             aria-label="Username"
             aria-describedby="basic-addon1"
