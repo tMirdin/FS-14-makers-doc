@@ -1,0 +1,45 @@
+.containerAddTopic {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #001731;
+}
+
+.addTopic-btn {
+  border-radius: 10px;
+  background: rgba(44, 130, 253, 0.15);
+  color: #398bff;
+  font-weight: 600;
+  width: 140px;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px rgba(44, 130, 253, 0.15) solid;
+}
+
+.addTopic-btn:hover {
+  width: 141px;
+  height: 41px;
+  transition: 0.2s;
+  background-color: #398bff;
+}
+
+.form-control {
+  border: 2px #001731 solid;
+}
+
+.addTopic-inputs::placeholder {
+  text-align: center;
+}
+
+.form-control::placeholder {
+  color: #00173178;
+}
+
+#basic-addon1 {
+  width: 100px;
+  background-color: #398bff;
+  color: #fff;
+  font-weight: 500;
+  border: 2px #001731 solid;
+}

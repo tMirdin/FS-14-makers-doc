@@ -1,12 +1,15 @@
 import React from "react";
 import NavBar from "./Components/Navbar/NavBar";
+import TopicContextProvider from "./context/TopicContextProvider";
 import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
     <>
-      <NavBar />
-      <MainRoutes />
+      <TopicContextProvider>
+        <NavBar />
+        <MainRoutes />
+      </TopicContextProvider>
     </>
   );
 };
