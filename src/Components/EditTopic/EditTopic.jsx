@@ -1,17 +1,26 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { InputGroup, FormControl, Button } from "react-bootstrap";
 import { topicsContext } from "../../context/TopicContextProvider";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const EditTopic = () => {
-  const { editTopicPatch } = useContext(topicsContext);
+  const { editTopicPatch, getTopicDetails, topicDetailsObj } =
+    useContext(topicsContext);
 
-  const [editTitle, setEditTitle] = useState("");
-  const [editDescription, setEditDescription] = useState("");
-  const [editImage, setEditImage] = useState("");
-  const [editLib, setEditLib] = useState("");
+  console.log(topicDetailsObj);
+
+  const [editTitle, setEditTitle] = useState(topicDetailsObj.title);
+  const [editDescription, setEditDescription] = useState(
+    topicDetailsObj.description
+  );
+  const [editImage, setEditImage] = useState(topicDetailsObj.image);
+  const [editLib, setEditLib] = useState(topicDetailsObj.lib);
 
   let { id } = useParams();
+
+  useEffect(() => {
+    getTopicDetails(id);
+  }, [id]);
 
   function handleClick() {
     let editedTopic = {
@@ -66,9 +75,11 @@ const EditTopic = () => {
             onChange={(e) => setEditLib(e.target.value)}
           />
         </InputGroup>
-        <Button onClick={handleClick} className="addTopic-btn">
-          Сохранить
-        </Button>
+        <Link to="/topicsList">
+          <Button onClick={handleClick} className="addTopic-btn">
+            Сохранить
+          </Button>
+        </Link>
       </div>
     </>
   );

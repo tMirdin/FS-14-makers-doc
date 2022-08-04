@@ -8,11 +8,18 @@
       "id": 2
     },
     {
-      "title": "HTML",
+      "title": "HTML-5version",
       "description": "HTML — стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора. Википедия",
       "image": "https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw",
       "lib": "https://ru.wikipedia.org/wiki/HTML",
       "id": 3
+    },
+    {
+      "title": "Native-JS",
+      "description": "hjkh",
+      "image": "hjk",
+      "lib": "hjkhjkh",
+      "id": 4
     }
   ]
 }
