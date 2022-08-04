@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { topicsContext } from "../../context/TopicContextProvider";
 import { Button } from "react-bootstrap";
 import "./TopicsList.css";
+import { Link } from "react-router-dom";
 
 const TopicsList = () => {
   const { topicsArr, getTopics } = useContext(topicsContext);
@@ -9,11 +10,11 @@ const TopicsList = () => {
   useEffect(() => {
     getTopics();
   }, []);
-  console.log(topicsArr);
+  // console.log(topicsArr);
   return (
     <div className="container d-flex justify-content-evenly flex-wrap container-cards">
       {topicsArr.map((item) => (
-        <div>
+        <div key={item.id}>
           <div
             className="card1 text-center m-4"
             style={{ width: "18rem", height: "350px" }}
@@ -26,8 +27,9 @@ const TopicsList = () => {
             />
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
-
-              <Button>Просмотреть</Button>
+              <Link to={`/topicsDetails/${item.id}`}>
+                <Button>Просмотреть</Button>
+              </Link>
             </div>
           </div>
         </div>

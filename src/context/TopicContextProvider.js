@@ -51,10 +51,22 @@ const TopicContextProvider = ({ children }) => {
     dispatch(action);
   };
 
+  // Функция для удаления одного объекта из массива topics
+  const deleteTopic = async (id) => {
+    await axios.delete(`${API}/${id}`);
+  };
+
+  // Функция для изменения данных в массиве topics
+  const editTopicPatch = async (id, editedTopic) => {
+    await axios.patch(`${API}/${id}`, editedTopic);
+  };
+
   let cloud = {
     addTopic,
     getTopics,
     getTopicDetails,
+    deleteTopic,
+    editTopicPatch,
     topicsArr: state.topics,
     topicDetailsObj: state.topicDetails,
   };

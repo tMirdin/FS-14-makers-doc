@@ -11,8 +11,8 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <NavLink to="/">
-          <Navbar.Brand href="#">Makers Documentation</Navbar.Brand>
+        <NavLink id="not-underline" to="/">
+          <Navbar.Brand>Makers Documentation</Navbar.Brand>
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -21,15 +21,15 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#">
-              <NavLink to="/">Home</NavLink>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <NavLink to="/add">Add Topic</NavLink>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <NavLink to="/topicsList">Topics List</NavLink>
-            </Nav.Link>
+            <NavLink className="nav-link" to="/">
+              Home
+            </NavLink>
+            <NavLink className="nav-link" to="/add">
+              Add Topic
+            </NavLink>
+            <NavLink className="nav-link" to="/topicsList">
+              Topics List
+            </NavLink>
           </Nav>
           <Form className="d-flex">
             <Form.Control
