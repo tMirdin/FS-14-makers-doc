@@ -31,3 +31,10 @@
 .card-title {
   margin-bottom: 10px;
 }
+
+.block-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}

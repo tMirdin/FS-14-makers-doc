@@ -2,24 +2,73 @@
   "topics": [
     {
       "title": "JS",
-      "description": "Язык программирования ",
-      "image": "data:image/jpeg;base64,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",
+      "description": "язык програмирования",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
       "lib": "https://learn.javascript.ru/",
+      "id": 1
+    },
+    {
+      "title": "HTML",
+      "description": "HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык гипертекстовой разметки документов для просмотра",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png",
+      "lib": "https://ru.wikipedia.org/wiki/HTML",
       "id": 2
     },
     {
-      "title": "HTML-5version",
-      "description": "HTML — стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора. Википедия",
-      "image": "https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw",
-      "lib": "https://ru.wikipedia.org/wiki/HTML",
+      "title": "CSS",
+      "description": "CSS (/siːɛsɛs/ англ. Cascading Style Sheets «каскадные таблицы стилей») — формальный язык описания внешнего вида документа (веб-страницы), ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
+      "lib": "https://ru.wikipedia.org/wiki/CSS",
       "id": 3
     },
     {
-      "title": "Native-JS",
-      "description": "hjkh",
-      "image": "hjk",
-      "lib": "hjkhjkh",
+      "title": "GitHub",
+      "description": "GitHub is where over 83 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+      "lib": "https://github.com/",
       "id": 4
+    },
+    {
+      "title": "Bootstrap",
+      "description": "Bootstrap utilizes Sass for a modular and customizable architecture. Import only the components you need, enable global options like gradients and shadows",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png",
+      "lib": "https://getbootstrap.com/",
+      "id": 5
+    },
+    {
+      "title": "JSON",
+      "description": "JSON (англ. JavaScript Object Notation, обычно произносится как /ˈdʒeɪsən/ JAY-sən) — текстовый формат обмена данными, основанный на JavaScript.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png",
+      "lib": "https://ru.wikipedia.org/wiki/JSON",
+      "id": 6
+    },
+    {
+      "title": "React",
+      "description": " React – это популярная библиотека языка программирования Javascript, которая применяется для создания пользовательских web-интерфейсов. Она имеет определенные шаблоны, благодаря чему существенно упрощает и ускоряет процесс frontend-разработки. Говоря простыми словами",
+      "image": "https://web-creator.ru/uploads/Page/33/react.svg",
+      "lib": "https://ru.reactjs.org/",
+      "id": 7
+    },
+    {
+      "title": "Sass",
+      "description": " SCSS определенно более близок к CSS, чем Sass. Разработчики Sass потрудились над тем, чтобы сделать оба синтаксиса ближе друг к другу, заменив ! (знак переменной) и = (знак присвоения) на $ и : из CSS. Поэтому при запуске нового проекта вы можете задуматься, какой синтаксис использовать. SCSS определенно более близок к CSS, чем Sass. Разработчики Sass потрудились над тем, чтобы сделать оба синтаксиса ближе друг к другу, заменив ! (знак переменной) и = (знак присвоения) на $ и : из CSS. Поэтому при запуске нового проекта вы можете задуматься, какой синтаксис использовать.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+      "lib": "https://sass-lang.com/",
+      "id": 8
+    },
+    {
+      "title": "TypeScript",
+      "description": " TypeScript is a superset of typed JavaScript (optional) that can help build and manage large-scale JavaScript projects. It can be considered JavaScript with additional features like strong static typing, compilation, and object-oriented programming.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+      "lib": "https://www.typescriptlang.org/",
+      "id": 9
+    },
+    {
+      "title": "Node js",
+      "description": " Node. js (Node) — это платформа с открытым исходным кодом для работы с языком JavaScript, построенная на движке Chrome V8. Она позволяет писать серверный код для веб-приложений и динамических веб-страниц, а также программ командной строки",
+      "image": "https://miro.medium.com/1*bc9pmTiyKR0WNPka2w3e0Q.png",
+      "lib": "https://nodejs.org/",
+      "id": 10
     }
   ]
 }

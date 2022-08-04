@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -6,8 +6,15 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
+import { topicsContext } from "../../context/TopicContextProvider";
 
 const NavBar = () => {
+  const { searchVal, setSearchVal, getTopics } = useContext(topicsContext);
+
+  useEffect(() => {
+    getTopics();
+  }, [searchVal]);
+
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -37,6 +44,7 @@ const NavBar = () => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(e) => setSearchVal(e.target.value)}
             />
             <Button variant="outline-success">Search</Button>
           </Form>

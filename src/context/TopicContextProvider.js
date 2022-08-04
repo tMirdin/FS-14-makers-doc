@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useState } from "react";
 
 export const topicsContext = createContext();
 
@@ -21,7 +21,12 @@ const reducer = (prevState = INIT_STATE, action) => {
   }
 };
 
+let page = 1;
+let totalPage = [];
+let limit = 6;
+
 const TopicContextProvider = ({ children }) => {
+  const [searchVal, setSearchVal] = useState("");
   // хук useReducer - принимает 2 аргумента: функцию reducer и начальное состояние. Затем хук возвращает массив из 2 элементов: текущее состояние и функцию dispatch. Dispatch (принимает в аргументы action) - функция, которая отправляет объект "action" для изменения состояния.
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
@@ -32,7 +37,10 @@ const TopicContextProvider = ({ children }) => {
 
   //   Функция для запроса данных с db.json (GET)
   const getTopics = async () => {
-    const { data } = await axios.get(API);
+    totalPageFunc();
+    const { data } = await axios.get(
+      `${API}?_page=${page}&_limit=${limit}&q=${searchVal}`
+    );
     let action = {
       type: "GET_TOPICS",
       payload: data,
@@ -61,12 +69,35 @@ const TopicContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedTopic);
   };
 
+  // Функции для пагинации
+
+  const totalPageFunc = async () => {
+    let { data } = await axios(API);
+    totalPage = Math.ceil(data.length / limit);
+  };
+
+  const prevPage = () => {
+    if (page <= 1) return;
+    page--;
+    getTopics();
+  };
+
+  const nextPage = () => {
+    if (totalPage <= page) return;
+    page++;
+    getTopics();
+  };
+
   let cloud = {
     addTopic,
     getTopics,
     getTopicDetails,
     deleteTopic,
     editTopicPatch,
+    prevPage,
+    nextPage,
+    setSearchVal,
+    searchVal,
     topicsArr: state.topics,
     topicDetailsObj: state.topicDetails,
   };
