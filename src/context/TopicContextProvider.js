@@ -31,8 +31,8 @@ const TopicContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   // Функция для добавления данных в db.json (POST)
-  const addTopic = (topic) => {
-    axios.post(API, topic);
+  const addTopic = async (topic) => {
+    await axios.post(API, topic);
   };
 
   //   Функция для запроса данных с db.json (GET)
